@@ -1,43 +1,43 @@
 {
-	"name": "list-symbols",
-	"displayName": "list-symbols",
-	"description": "List symbols (or outline) in a code file as plain text",
-	"version": "0.0.5",
-	"publisher": "jmbeach",
-	"repository": "https://github.com/jmbeach/vscode-list-symbols",
-	"icon": "src/assets/icon.png",
+	"name": "listfunctionnames",
+	"displayName": "List Function Names CSV",
+	"description": "List all the files and function names in CSV format",
+	"version": "0.0.3",
+	"publisher": "Dripdrop",
+	"repository": "https://github.com/rugile-dd/vscode-list-function-names.git",
+	"icon": "src/assets/extension-logo.png",
 	"engines": {
-		"vscode": "^1.34.0"
+		"vscode": "^1.76.0"
 	},
 	"categories": [
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.listSymbols",
-		"onCommand:extension.listAllSymbolsInFolder"
+		"onCommand:extension.listFunctionNames",
+		"onCommand:extension.listAllFunctionNamesInFolder"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.listSymbols",
-				"title": "List Symbols"
+				"command": "extension.listFunctionNames",
+				"title": "List Function Names"
 			},
 			{
-				"command": "extension.listAllSymbolsInFolder",
-				"title": "List All Symbols in Folder"
+				"command": "extension.listAllFunctionNamesInFolder",
+				"title": "List All Function Names in Folder"
 			}
 		],
 		"menus": {
 			"explorer/context": [
 				{
-					"command": "extension.listAllSymbolsInFolder",
+					"command": "extension.listAllFunctionNamesInFolder",
 					"when": "explorerResourceIsFolder"
 				}
 			],
 			"commandPalette": [
 				{
-					"command": "extension.listAllSymbolsInFolder",
+					"command": "extension.listAllFunctionNamesInFolder",
 					"when": "false"
 				}
 			]
